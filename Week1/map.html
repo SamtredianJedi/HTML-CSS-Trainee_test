@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Arrays</h2>
+
+    <p>Compute a new array with the full name of each person in the old array:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const results = [{
+            day1: "Back Day",
+            day2: "Biceps Day"
+        }, {
+            day1: "Chest Day",
+            day2: "Triceps Day"
+        }, {
+            day1: "Leg Day",
+            day2: "Shoulders Day"
+        }];
+
+        document.getElementById("demo").innerHTML = results.map(getFullName);
+
+        function getFullName(item) {
+            return [item.day1, item.day2].join(" ");
+        }
+    </script>
+
+</body>
+
+</html>

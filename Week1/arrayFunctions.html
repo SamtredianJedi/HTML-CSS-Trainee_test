@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>JavaScript Arrays</h1>
+    <h2>The filter() Method</h2>
+
+    <p>Get every element in the array that has a value of 18 or more:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const ages = [22, 21, 7, 41, 67, 12];
+
+        document.getElementById("demo").innerHTML = ages.filter(checkAdult);
+
+        function checkAdult(age) {
+            return age >= 18;
+        }
+    </script>
+
+    <!-- const ages = [22, 21, 7, 41, 67, 12];
+
+ages.some(checkAdult);
+function checkAdult(age) {
+  return age > 18;
+} -->
+
+
+
+
+    <!-- const ages = [22, 21, 7, 41, 67, 12];
+
+ages.every(checkAge)
+
+function checkAge(age) {
+  return age > 18;
+} -->
+
+    <!-- const ages = [22, 21, 7, 41, 67, 12];
+const result = ages.filter(checkAdult);
+
+function checkAdult(age) {
+  return age >= 18;
+} -->
+
+
+
+
+
+</body>
+
+</html>
