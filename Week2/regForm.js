@@ -1,8 +1,8 @@
 function myFunction() {
-    var myname = document.getElementById("myname").value;
-    var myphone = document.getElementById("myphone").value;
-    var mycontry = document.getElementById("mycontry").value;
-    var mymail = document.getElementById("mymail").value;
+    let myname = document.getElementById("myname").value;
+    let myphone = document.getElementById("myphone").value;
+    let mycontry = document.getElementById("mycontry").value;
+    let mymail = document.getElementById("mymail").value;
     result = myname + "," + myphone + "," + mycontry + "," + mymail;
     alert(result);
     return result;
