@@ -6,7 +6,7 @@ const getToDos = async() =>
 const secondFunc = async() => {
     try {
         const res = await getToDos();
-        const mySet = Array.from({ length: 11 }, () => new Set()); // pre-allocate the size of the array
+        const mySet = Array.from({ length: 11 }, () => new Set());
         for (const user of res) {
             mySet[user.userId].add(user);
         }
