@@ -1,13 +1,27 @@
-fetch("https://jsonplaceholder.typicode.com/todos", {
-        method: "POST",
-        body: JSON.stringify({
-            userId: 1,
-            title: "Fix my bugs",
-            completed: false
-        }),
+// Get request
+
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+    .then(response => response.json())
+    .then(json => console.log(json))
+    .catch(error => console.error(error));
+
+
+// Post Request
+
+
+const data = {
+    title: 'place',
+    body: 'bar',
+    userId: 1
+};
+
+fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
         headers: {
-            "Content-type": "application/json; charset=UTF-8"
-        }
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
     })
-    .then((response) => response.json())
-    .then((json) => console.log(json));
+    .then(response => response.json())
+    .then(json => console.log(json))
+    .catch(error => console.error(error));
