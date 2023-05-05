@@ -1,26 +1,26 @@
-const ul = document.getElementById('list') //line 1
+const ul = document.getElementById('list')
 let li;
-const addButton = document.getElementById('add') //line 2
+const addButton = document.getElementById('add')
 addButton.addEventListener("click", addItem)
 
-function addItem() { //line 3
-    var input = document.getElementById('input') //line 4
-    var item = input.value; //line 5    
-    var textNode = document.createTextNode(item) //line 6
-    if (item == '') { //line 7
+function addItem() {
+    const input = document.getElementById('input')
+    const item = input.value;
+    const textNode = document.createTextNode(item)
+    if (item == '') {
         msg = "Enter your Task"
         alert(msg)
         return false
 
-    } else { //line 8
-        li = document.createElement('li') //line 9
-        let checkbox = document.createElement('input') //line 10
-        checkbox.type = 'checkbox' //line 11
-        checkbox.setAttribute('id', 'check') //line 12
+    } else {
+        li = document.createElement('li')
+        let checkbox = document.createElement('input')
+        checkbox.type = 'checkbox'
+        checkbox.setAttribute('id', 'check')
 
-        let label = document.createElement('label') //line 13
+        let label = document.createElement('label')
 
-        ul.appendChild(label) //line 14
+        ul.appendChild(label)
         li.appendChild(checkbox)
         label.appendChild(textNode)
         li.appendChild(label)
@@ -28,18 +28,18 @@ function addItem() { //line 3
         setTimeout(() => {
             li.className = 'visual'
         }, 5)
-        input.value = " " //line 15
+        input.value = " "
     }
 }
 
-var removeButton = document.getElementById('remove') //line 16
-removeButton.addEventListener("click", removeItem) //line 17
+var removeButton = document.getElementById('remove')
+removeButton.addEventListener("click", removeItem)
 
-function removeItem() { //line 18
+function removeItem() {
     li = ul.children
-    for (let index = 0; index < li.length; index++) { //line 19
-        const element = li[index]; //line 20
-        while (li[index] && li[index].children[0].checked) { //line 21
+    for (let index = 0; index < li.length; index++) {
+        const element = li[index];
+        while (li[index] && li[index].children[0].checked) {
             ul.removeChild(li[index])
         }
 
